@@ -10,7 +10,7 @@ File.open("Header.tmp", "w") do |headerIO|
 		end
 		FileUtils.mv("config.tmp", sourceFile)	
 		if sourceFile.end_with? ".h" then
-			headerIO << "#import \"" + sourceFile + "\""
+			headerIO << "#import \"" + sourceFile.gsub(/\.\//, '') + "\""
 		end		
 	end
 end
