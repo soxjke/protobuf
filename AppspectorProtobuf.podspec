@@ -25,7 +25,11 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-  s.source_files = '*.proto'
+  s.source_files = '*.{h,m,proto}'
+  
+  s.prepare_command = <<-CMD
+                        protoc --plugin=/usr/local/bin/protoc-gen-objc --proto_path=.:protobuf-objc/src/compiler/ DeviceInfo.proto --objc_out="./"
+                   CMD
 
   s.dependency 'ProtocolBuffers'
 end
