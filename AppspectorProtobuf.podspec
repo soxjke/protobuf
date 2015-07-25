@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/soxjke/protobuf"
   s.license          = 'MIT'
   s.author           = { "Petro Korienev" => "soxjke@gmail.com" }
-  s.source           = { :git => "https://github.com/soxjke/protobuf.git"}
+  s.source           = { :git => "https://github.com/soxjke/protobuf.git", :branch => "master"}
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
