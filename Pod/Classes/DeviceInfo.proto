@@ -1,0 +1,20 @@
+import "google/protobuf/objectivec-descriptor.proto";
+
+option (google.protobuf.objectivec_file_options).class_prefix = "APS";
+option (google.protobuf.objectivec_file_options).relax_camel_case = true;
+
+message DeviceInfo
+{
+    required string model = 1;
+    required string systemVersion = 2;
+    required bool isJailbroken = 3;
+    enum DeviceFamily
+    {
+        DeviceFamilyiPhone = 0;
+        DeviceFamilyiPod = 1;
+        DeviceFamilyiPad = 2;
+        DeviceFamilyAppleTV = 3;
+        DeviceFamilyUnknown = 4;
+    }
+    required DeviceFamily deviceFamily = 4;
+}
