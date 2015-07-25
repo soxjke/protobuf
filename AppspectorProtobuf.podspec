@@ -28,7 +28,6 @@ Pod::Spec.new do |s|
   s.source_files = '*.{h,m,proto}'
   
   s.prepare_command = <<-CMD 
-  							sh ./install.sh 
   						 CMD
 
   s.dependency 'ProtocolBuffers'
