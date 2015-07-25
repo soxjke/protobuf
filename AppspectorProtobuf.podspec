@@ -27,8 +27,7 @@ Pod::Spec.new do |s|
 
   s.source_files = '*.{h,m,proto}'
   
-  s.prepare_command = <<-CMD 
-  						 CMD
+  s.prepare_command = "ruby install.rb"
 
   s.dependency 'ProtocolBuffers'
 end
