@@ -9,9 +9,9 @@ File.open("Header.tmp", "w") do |headerIO|
 			io << File.read(sourceFile).gsub(/\.pb\.h\"/, '.h"')
 		end
 		FileUtils.mv("config.tmp", sourceFile)	
-	end
-	if sourceFile.end_with? ".h" then
-        headerIO << "#import \"" + sourceFile + "\""
+		if sourceFile.end_with? ".h" then
+			headerIO << "#import \"" + sourceFile + "\""
+		end		
 	end
 end
 FileUtils.mv("Header.tmp", "AppspectorProtobuf.h")
